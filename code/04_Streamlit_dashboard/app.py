@@ -48,7 +48,7 @@ def generate_nicknames(puuid_list):
         nick_map[p] = f"{random.choice(adjs)} {random.choice(nouns)} #{i+1}"
     return nick_map
 
-puuid_to_nick = generate_nicknames(user_profile_df['puuid'].unique())
+puuid_to_nick = generate_nicknames(user_profile_df['puuid'].unique().tolist())
 
 # ==========================================
 # 1. 추천 로직 V4 (사거리 3단계 분류 적용)
